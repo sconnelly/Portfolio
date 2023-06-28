@@ -27,11 +27,11 @@
 <body>
 
 <div class="center">
-  <div id="redirect-msg" class="bold-text">
-    Redirecting to Shawn's Google Drive Career Portfolio in <span id="countdown">3</span> seconds...
-  </div>
   <div>Note: This is private content intended for prospective employers and recruiters only.</div>
   <div class="path-text">Press any key to continue to the path (https://docs.google.com/document/d/15E47jwhfTS1VC8C96k8ZIwEXTI9AoOjoajkrlOXW-K0/edit?usp=sharing)</div>
+  <div id="redirect-msg" class="bold-text" style="display: none;">
+    Redirecting to Shawn's Google Drive Career Portfolio in <span id="countdown">3</span> seconds...
+  </div>
 </div>
 
 <script>
@@ -57,10 +57,7 @@
     redirectMsgElement.style.display = 'block';
     document.body.removeEventListener('keydown', arguments.callee);
   });
-
-  redirectMsgElement.style.display = 'none';
 </script>
 
 </body>
 </html>
-
