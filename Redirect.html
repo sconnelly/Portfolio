@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecting...</title>
+  <style>
+    .center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 1px solid black;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="center" id="redirect-msg">
+  Redirecting to Shawn's Google Drive Career Portfolio in <span id="countdown">3</span> seconds...
+</div>
+
+<script>
+  var countdownElement = document.getElementById('countdown');
+  var secondsLeft = 3;
+
+  var intervalId = setInterval(function() {
+    secondsLeft--;
+    countdownElement.innerText = secondsLeft;
+
+    if (secondsLeft === 0) {
+      clearInterval(intervalId);
+      window.location = 'https://docs.google.com/document/d/15E47jwhfTS1VC8C96k8ZIwEXTI9AoOjoajkrlOXW-K0/edit?usp=sharing';
+    }
+  }, 1000);
+</script>
+
+</body>
+</html>
